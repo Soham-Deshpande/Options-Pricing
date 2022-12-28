@@ -1,4 +1,4 @@
-# Options Modelling Research
+# Options Pricing Research
 An Investigation into quantitative finance and options modelling
 In this project I will be researching and documenting my findings on options pricing.
 
