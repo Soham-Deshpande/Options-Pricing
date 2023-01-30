@@ -29,5 +29,45 @@ The contact specifications contain the following: Underlying asset, expriation
 date, exercise price and type. 
  
 \section{Binomial Pricing Model}
-
+The binomial asset pricing model is a powerful tool that can be used to
+understand arbitrage pricing theory. This first section will explore the
+simplest binomial model before generalising to a more realistic, complex
+multiperiod binomial model. 
+\\
+For the general one-period model we can call the beginning of the period time
+zero($T_{0}$) and the end of the period time one($T_1$). At time zero, we have a
+stock whose price per share can be written as $S_0$, a positive quantity known
+at $T_0$. At $T_1$, the price per share of this stock will be one of two
+positive values, which we can denote as $S_1(H)$ and $S_1(T)$, the S and H
+standing for heads and tails respectively. We can assume that the probability of
+a head is $p$, therefore making the probability of a tail $q = 1-p$, both being
+positive values. 
+\\
+The outcome of the coin toss and hence the value which the stock price will take
+at time one is known at $T_1$ but not at $T_0$. Any quantity not known at $T_0$
+will be known as random henceforth as it depends on the random experiment of
+tossing a coin. \\
+Two new positive values can be introduced: \\
+$u = \frac{S_1(H)}{S_0)},  d = \frac{S_1(T)}{S_0}$.
+\\ It is assumed that $d<u$ where u can be referred to as the up factor and d as
+the down factor.
+\\
+An interest rate $r$ can be introdcued. One dollar invested in the market at
+$T_0$ will yield 1+r dollars at $T_1$. 
+\\
+An essential feature of an efficient market is that if a trading strategy can
+turn nothing into something, then it must also run the risk of loss. Otherwise
+there would be an arbitrage. More specifically, an arbitrage can be defined as
+as a trading strategy that begins with no money, has zero probability of losing
+money, and has a positive probability of making money. 
+\\
+In the one-period binomial model, to rule out arbitrage we must assume
+$0<d<1+r<u$.
+\\
+Let us now consider a European call option which relies on the fact that its
+owner has the right but not the obligation to buy one share of the stock at 
+$T_1$for the strike price K. We shall assume here that $S_1(T)<K<S_1(H)$. If we
+get a tail then the option expires worthless. If the outcome is a head then the
+option can be exercised and yields a profit of $S_1(H) - K$. This can be
+summarised by saying that the option at $T_1$ is worth $(S_1 - K)^+$
 \end{document}
